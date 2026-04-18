@@ -1037,7 +1037,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 
 @media (max-width: 480px) {
   .hero-actions { justify-content: center; }
-  .hero-actions .btn { font-size: 0.82rem; padding: 11px 20px; }
+  .hero-actions .btn { font-size: 0.82rem; padding: 11px 20px; flex: 1; justify-content: center; }
   .hero-proof { gap: 16px; }
   .proof-divider { display: none; }
 
