@@ -44,6 +44,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -52,6 +53,7 @@ body {
   background: var(--bg-white);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img { max-width: 100%; display: block; }
@@ -990,10 +992,21 @@ h4 { font-size: 1.05rem; font-weight: 600; }
     padding: 24px;
     gap: 18px;
     box-shadow: var(--shadow-lg);
+    z-index: 200;
   }
   .nav-links.open { display: flex; }
-  .nav-links a { color: rgba(255,255,255,0.85); }
+  .nav-links a { color: rgba(255,255,255,0.85); font-size: 1rem; }
+  .nav-links a:hover { color: var(--olive); }
   .hamburger { display: flex; }
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
 
   .services-grid { grid-template-columns: 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
@@ -1004,8 +1017,14 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   .contact-form .form-row { grid-template-columns: 1fr; }
   .checkbox-grid { grid-template-columns: 1fr; }
 
-  .trust-inner { flex-direction: column; gap: 20px; }
-  .trust-logos { gap: 18px; }
+  .trust-inner { flex-direction: column; gap: 20px; text-align: center; }
+  .trust-label { white-space: normal; }
+  .trust-logos { gap: 14px; justify-content: center; }
+
+  .hero { min-height: auto; padding-top: 100px; padding-bottom: 40px; }
+  .hero-content { padding: 40px 0; }
+
+  .about-credential-badge { font-size: 0.75rem; padding: 8px 14px; }
 }
 
 @media (max-width: 480px) {
@@ -1015,6 +1034,9 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   .proof-divider { display: none; }
 
   .footer-bottom .container { flex-direction: column; gap: 12px; text-align: center; }
+
+  .about-grid { gap: 40px; }
+  .about-card-img { max-width: 280px; }
 }
 
 

@@ -453,6 +453,12 @@
         navLinks.classList.toggle("open");
         hamburger.classList.toggle("active");
       });
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+          hamburger.classList.remove("active");
+        });
+      });
 
       // Form submit
       document.getElementById("contactForm").addEventListener("submit", (e) => {
