@@ -1025,18 +1025,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 
   .trust-inner { flex-direction: column; gap: 20px; text-align: center; }
   .trust-label { white-space: normal; }
-  .trust-logos {
-    gap: 10px;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-    display: inline-flex;
-  }
-  .trust-logo-item::before {
-    content: '•';
-    color: #fff;
-    margin-right: 8px;
-  }
+  .trust-logos { display: none; }
 
   .container { padding: 0 28px; }
 
@@ -1047,15 +1036,16 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 }
 
 @media (max-width: 480px) {
-  .hero-actions { flex-direction: column; }
-  .hero-actions .btn { width: 100%; justify-content: center; }
+  .hero-actions { justify-content: center; }
+  .hero-actions .btn { font-size: 0.82rem; padding: 11px 20px; }
   .hero-proof { gap: 16px; }
   .proof-divider { display: none; }
 
   .footer-bottom .container { flex-direction: column; gap: 12px; text-align: center; }
 
   .about-grid { gap: 40px; }
-  .about-card-img { max-width: 280px; }
+  .about-card-img { max-width: 240px; max-height: 300px; }
+  .about-card-img img { object-fit: cover; object-position: top; height: 300px; }
 }
 
 
