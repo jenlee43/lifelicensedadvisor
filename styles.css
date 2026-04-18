@@ -907,7 +907,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 .footer-brand .footer-logo {
   height: 48px;
   width: auto;
-  margin-top: -10px;
+  margin-top: 10px;
 }
 .footer-brand p {
   margin-top: 16px;
