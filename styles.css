@@ -293,11 +293,13 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   padding: 7px 16px;
   border-radius: 100px;
   margin-bottom: 24px;
+  margin-left: 16px;
 }
 
 .hero h1 {
   color: var(--green-dark);
   margin-bottom: 20px;
+  padding-left: 16px;
 }
 .hero h1 em {
   color: var(--olive-dark);
@@ -309,12 +311,14 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   font-size: 1.05rem;
   margin-bottom: 36px;
   line-height: 1.7;
+  padding-left: 16px;
 }
 
 .hero-actions {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+  padding-left: 16px;
   margin-bottom: 52px;
 }
 
@@ -323,6 +327,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   align-items: center;
   gap: 24px;
   flex-wrap: wrap;
+  padding-left: 16px;
 }
 .proof-item {
   display: flex;
@@ -333,6 +338,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   font-weight: 700;
   color: var(--green-dark);
   font-family: var(--font-heading);
+  padding-left: 16px;
 }
 .proof-item span {
   font-size: 0.78rem;
@@ -1019,7 +1025,18 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 
   .trust-inner { flex-direction: column; gap: 20px; text-align: center; }
   .trust-label { white-space: normal; }
-  .trust-logos { gap: 14px; justify-content: center; }
+  .trust-logos {
+    gap: 10px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    display: inline-flex;
+  }
+  .trust-logo-item::before {
+    content: '•';
+    color: #fff;
+    margin-right: 8px;
+  }
 
   .container { padding: 0 28px; }
 
